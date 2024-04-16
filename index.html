@@ -32,6 +32,86 @@
     nav {
       margin-bottom: 30px;
     }
+/* Hamburger menu button */
+.menu-toggle {
+  display: none; /* Initially hidden */
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 4px;
+  background-color: #304674;
+  border-radius: 2px;
+}
+
+/* Responsive navigation menu */
+.nav-menu {
+  display: flex; /* Default display */
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Default display */
+}
+
+.nav-menu ul li {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #304674;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.nav-menu ul li a:hover, .active {
+  background-color: #304674;
+  color: white;
+  box-shadow: 0px 0px 10px #304674;
+}
+
+/* Hide the menu by default */
+.nav-menu ul {
+  display: none; /* Hidden by default on small screens */
+}
+
+/* Show the menu on larger screens */
+@media (min-width: 600px) {
+  .menu-toggle {
+    display: none; /* Hide hamburger button */
+  }
+  .nav-menu ul {
+    display: flex; /* Show menu items */
+  }
+}
+
+/* Show the hamburger button and hide the menu on smaller screens */
+@media (max-width: 599px) {
+  .menu-toggle {
+    display: flex; /* Show hamburger button */
+  }
+  .nav-menu ul {
+    display: none; /* Hide menu items */
+  }
+}
+
+/* When the menu is open */
+.nav-menu ul.show {
+  display: flex; /* Show the menu items */
+}
 
     nav ul {
       list-style-type: none;
@@ -255,16 +335,24 @@ button {
   <div class="container">
     <h1>Welcome to Apna Career</h1>
     <p>A platform to explore opportunities and excel in your career journey.</p>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="#">Latest in News</a></li>
-        <li><a href="#">Exams</a></li>
-        <li><a href="#">Scholarships</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Internships</a></li>
-      </ul>
-    </nav>
+    <!-- Add a hamburger menu button -->
+<div class="menu-toggle" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- Navigation bar with menu items -->
+<nav class="nav-menu">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="#">Latest in News</a></li>
+    <li><a href="#">Exams</a></li>
+    <li><a href="#">Scholarships</a></li>
+    <li><a href="#">Jobs</a></li>
+    <li><a href="#">Internships</a></li>
+  </ul>
+</nav>
     <!-- Space for latest post links -->
     <div class="latest-posts">
       <marquee behavior="scroll" direction="left">
@@ -284,7 +372,13 @@ button {
     <!-- End of latest post space -->
   </div>
 
-<!-- Space for professional job links table -->
+
+
+
+  
+  <div class="content">
+    <div class="box">
+    <!-- Space for professional job links table -->
 <div class="professional-jobs">
   <table style="width: 100%;">
     <tr>
@@ -312,12 +406,9 @@ button {
       <td><button class="btn-athlete" onclick="window.location.href='job16.html';">Athlete</button></td>
     </tr>
   </table>
-</div>
+</div></div>
 <!-- End of professional job links table -->
-
-
-  
-  <div class="content">
+<!-- start of columns -->    
     <div class="box">
       <div class="column">
         <h3>Job Applications</h3>
@@ -476,5 +567,10 @@ button {
     </div>
   </div>
 </body>
-
+<script>
+  function toggleMenu() {
+  var navMenu = document.querySelector('.nav-menu ul');
+  navMenu.classList.toggle('show');
+}
+</script>
 </html>
