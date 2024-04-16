@@ -201,16 +201,25 @@
 
 /* Style for all buttons */
 button {
+  width: 100%; /* Make buttons take up the full width of their cells */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin: 5px;
   display: block;
-  width: 100%;
   box-sizing: border-box;
 }
+/* Style for the professional job links table */
+.professional-jobs table {
+  width: 100%; /* Make the table take the full width of the container */
+  border-collapse: collapse; /* Remove any space between table cells */
+}
 
+.professional-jobs table td {
+  padding: 10px;
+  text-align: center; /* Center-align the buttons within each cell */
+}
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
@@ -266,11 +275,11 @@ button {
       </marquee>
     </div>
     <!-- End of latest post space -->
-  
+  </div>
 
 <!-- Space for professional job links table -->
 <div class="professional-jobs">
-  <table>
+  <table style="width: 100%;">
     <tr>
       <td><button class="btn-engineer" onclick="window.location.href='job1.html';">Engineer</button></td>
       <td><button class="btn-doctor" onclick="window.location.href='job2.html';">Doctor</button></td>
@@ -298,7 +307,7 @@ button {
   </table>
 </div>
 <!-- End of professional job links table -->
-</div>
+
 
   
   <div class="content">
@@ -320,7 +329,8 @@ button {
           <li><a href="#">Title 3</a></li>
           <li><a href="#">Title 4</a></li>
         </ul>
-      </div>
+      </div></div>
+     <div class="box">
       <div class="column">
         <h3>Exam Applications</h3>
         <ul>
@@ -358,7 +368,8 @@ button {
           <li><a href="#">Title 3</a></li>
           <li><a href="#">Title 4</a></li>
         </ul>
-      </div>
+      </div></div>
+      <div class="box">
       <div class="column">
         <h3>UG</h3>
         <ul>
@@ -396,7 +407,8 @@ button {
           <li><a href="#">Title 3</a></li>
           <li><a href="#">Title 4</a></li>
         </ul>
-      </div>
+      </div></div>
+    <div class="box">
       <div class="column">
         <h3>Army & Defence</h3>
         <ul>
@@ -434,7 +446,8 @@ button {
           <li><a href="#">Title 3</a></li>
           <li><a href="#">Title 4</a></li>
         </ul>
-      </div>
+      </div></div>
+    <div class="box">
       <div class="column">
         <h3>Teaching</h3>
         <ul>
