@@ -2,615 +2,650 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Apna Career</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #eff7ff, #f3f6f4);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apna Career</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          background: linear-gradient(to bottom, #eff7ff, #f3f6f4);
+        }
+    
+        .container {
+          text-align: center;
+          padding-top: 50px;
+        }
+    
+        h1 {
+          color: #304674;
+          margin-bottom: 10px;
+        }
+    
+        p {
+          color: #465f93;
+          margin-bottom: 30px;
+        }
+    
+        nav {
+          margin-bottom: 30px;
+        }
+    /* Hamburger menu button */
+    .menu-toggle {
+      display: none; /* Initially hidden */
+      cursor: pointer;
+      width: 30px;
+      height: 20px;
+      flex-direction: column;
+      justify-content: space-between;
     }
-
-    .container {
-      text-align: center;
-      padding-top: 50px;
+    
+    .menu-toggle span {
+      width: 30px;
+      height: 4px;
+      background-color: #304674;
+      border-radius: 2px;
     }
-
-    h1 {
-      color: #304674;
-      margin-bottom: 10px;
+    
+    /* Responsive navigation menu */
+    .nav-menu {
+      display: flex; /* Default display */
+      justify-content: center;
+      align-items: center;
     }
-
-    p {
-      color: #465f93;
-      margin-bottom: 30px;
-    }
-
-    nav {
-      margin-bottom: 30px;
-    }
-/* Hamburger menu button */
-.menu-toggle {
-  display: none; /* Initially hidden */
-  cursor: pointer;
-  width: 30px;
-  height: 20px;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.menu-toggle span {
-  width: 30px;
-  height: 4px;
-  background-color: #304674;
-  border-radius: 2px;
-}
-
-/* Responsive navigation menu */
-.nav-menu {
-  display: flex; /* Default display */
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex; /* Default display */
-}
-
-.nav-menu ul li {
-  display: inline-block;
-  margin-right: 20px;
-  font-weight: bold;
-}
-
-.nav-menu ul li a {
-    text-decoration: none;
-  color: #304674;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-
-.nav-menu ul li a:hover, 
-.active {
-  background-color: #2986cc;
-  color: #f3f6f4;
-  box-shadow: 0px 0px 10px #304674;
-}
-
-/* Hide the menu by default */
-.nav-menu ul {
-  display: none; /* Hidden by default on small screens */
-}
-
-/* Show the menu on larger screens */
-@media (min-width: 600px) {
-  .menu-toggle {
-    display: none; /* Hide hamburger button */
-  }
-  .nav-menu ul {
-    display: flex; /* Show menu items */
-  }
-}
-
-/* Show the hamburger button and hide the menu on smaller screens */
-@media (max-width: 599px) {
-  .menu-toggle {
-    display: flex; /* Show hamburger button */
-  }
-  .nav-menu ul {
-    display: none; /* Hide menu items */
-  }
-}
-
-/* When the menu is open */
-.nav-menu ul.show {
-  display: flex; /* Show the menu items */
-}
-
-    nav ul {
+    
+    .nav-menu ul {
       list-style-type: none;
-      margin: 0;
       padding: 0;
+      margin: 0;
+      display: flex; /* Default display */
     }
-
-    nav ul li {
-      display: inline;
+    
+    .nav-menu ul li {
+      display: inline-block;
       margin-right: 20px;
       font-weight: bold;
     }
-
-    nav ul li a {
-      text-decoration: none;
+    
+    .nav-menu ul li a {
+        text-decoration: none;
       color: #304674;
-      /* Inactive menu item color */
       padding: 10px 20px;
       border-radius: 5px;
       transition: all 0.3s;
     }
-
-    nav ul li a:hover,
+    
+    .nav-menu ul li a:hover, 
     .active {
-      background-color: #304674;
+      background-color: #2986cc;
+      color: #f3f6f4;
+      box-shadow: 0px 0px 10px #304674;
+    }
+    
+    /* Hide the menu by default */
+    .nav-menu ul {
+      display: none; /* Hidden by default on small screens */
+    }
+    
+    /* Show the menu on larger screens */
+    @media (min-width: 600px) {
+      .menu-toggle {
+        display: none; /* Hide hamburger button */
+      }
+      .nav-menu ul {
+        display: flex; /* Show menu items */
+      }
+    }
+    
+    /* Show the hamburger button and hide the menu on smaller screens */
+    @media (max-width: 599px) {
+      .menu-toggle {
+        display: flex; /* Show hamburger button */
+      }
+      .nav-menu ul {
+        display: none; /* Hide menu items */
+      }
+    }
+    
+    /* When the menu is open */
+    .nav-menu ul.show {
+      display: flex; /* Show the menu items */
+    }
+    
+        nav ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+    
+        nav ul li {
+          display: inline;
+          margin-right: 20px;
+          font-weight: bold;
+        }
+    
+        nav ul li a {
+          text-decoration: none;
+          color: #304674;
+          /* Inactive menu item color */
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: all 0.3s;
+        }
+    
+        nav ul li a:hover,
+        .active {
+          background-color: #304674;
+          color: white;
+          box-shadow: 0px 0px 10px #304674;
+        }
+    
+        .box {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 25px;
+          /* Add a gap between the two sets of columns */
+          margin-top: 25px;
+        }
+    
+        .column {
+          flex: 1;
+          margin: 0 10px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0px 0px 10px #304674;
+        }
+    
+        .column h3 {
+          color: #541219;
+          text-align: center;
+        }
+    
+        .column ul {
+          padding: 0;
+        }
+    
+        .column ul li {
+          margin-bottom: 10px;
+          list-style-type: disc;
+        }
+    
+        .column ul li a {
+          text-decoration: none;
+          color: #eb4e3f;
+        }
+    
+        .column ul li a:hover {
+          color: #465f93;
+        }
+    
+        /*latest post marquee */
+        .latest-posts {
+          background-color: #f0f0f0;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .latest-posts marquee {
+          font-family: Arial, sans-serif;
+          color: #333;
+          font-size: 14px;
+          line-height: 1.5;
+          white-space: nowrap;
+          /* Prevent line breaks */
+        }
+        /* Base styles for all screen sizes */
+    /* CSS classes for button colors */
+    .btn-engineer {
+      background-color: #4CAF50; /* Green */
       color: white;
-      box-shadow: 0px 0px 10px #304674;
     }
-
-    .box {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 25px;
-      /* Add a gap between the two sets of columns */
-      margin-top: 25px;
+    
+    .btn-doctor {
+      background-color: #F44336; /* Red */
+      color: white;
     }
-
-    .column {
-      flex: 1;
-      margin: 0 10px;
-      background-color: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0px 0px 10px #304674;
+    
+    .btn-lawyer {
+      background-color: #2196F3; /* Blue */
+      color: white;
     }
-
-    .column h3 {
-      color: #541219;
-      text-align: center;
+    
+    .btn-teacher {
+      background-color: #FFC107; /* Amber */
+      color: white;
     }
-
-    .column ul {
-      padding: 0;
+    
+    .btn-architect {
+      background-color: #9C27B0; /* Purple */
+      color: white;
     }
-
-    .column ul li {
-      margin-bottom: 10px;
-      list-style-type: disc;
+    
+    .btn-nurse {
+      background-color: #E91E63; /* Pink */
+      color: white;
     }
-
-    .column ul li a {
-      text-decoration: none;
-      color: #eb4e3f;
+    
+    .btn-accountant {
+      background-color: #00BCD4; /* Cyan */
+      color: white;
     }
-
-    .column ul li a:hover {
-      color: #465f93;
+    
+    .btn-chef {
+      background-color: #FFEB3B; /* Yellow */
+      color: black;
     }
-
-    /*latest post marquee */
-    .latest-posts {
-      background-color: #f0f0f0;
-      padding: 10px;
+    
+    .btn-artist {
+      background-color: #8BC34A; /* Light Green */
+      color: white;
+    }
+    
+    .btn-musician {
+      background-color: #FF9800; /* Orange */
+      color: white;
+    }
+    
+    .btn-journalist {
+      background-color: #607D8B; /* Blue Grey */
+      color: white;
+    }
+    
+    .btn-scientist {
+      background-color: #3F51B5; /* Indigo */
+      color: white;
+    }
+    
+    .btn-photographer {
+      background-color: #CDDC39; /* Lime */
+      color: white;
+    }
+    
+    .btn-dancer {
+      background-color: #795548; /* Brown */
+      color: white;
+    }
+    
+    .btn-pilot {
+      background-color: #9E9E9E; /* Grey */
+      color: white;
+    }
+    
+    .btn-athlete {
+      background-color: #03A9F4; /* Light Blue */
+      color: white;
+    }
+    
+    /* Style for all buttons */
+    button {
+      width: 100%; /* Make buttons take up the full width of their cells */
+      padding: 10px 20px;
+      border: none;
       border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      margin: 5px;
+      display: block;
+      box-sizing: border-box;
     }
-
-    .latest-posts marquee {
-      font-family: Arial, sans-serif;
-      color: #333;
-      font-size: 14px;
-      line-height: 1.5;
-      white-space: nowrap;
-      /* Prevent line breaks */
+        button:hover {
+      background-color: #304674; /* Change to a gray color on hover */
+      color: white; /* Keep the text white */
     }
-    /* Base styles for all screen sizes */
-/* CSS classes for button colors */
-.btn-engineer {
-  background-color: #4CAF50; /* Green */
-  color: white;
-}
-
-.btn-doctor {
-  background-color: #F44336; /* Red */
-  color: white;
-}
-
-.btn-lawyer {
-  background-color: #2196F3; /* Blue */
-  color: white;
-}
-
-.btn-teacher {
-  background-color: #FFC107; /* Amber */
-  color: white;
-}
-
-.btn-architect {
-  background-color: #9C27B0; /* Purple */
-  color: white;
-}
-
-.btn-nurse {
-  background-color: #E91E63; /* Pink */
-  color: white;
-}
-
-.btn-accountant {
-  background-color: #00BCD4; /* Cyan */
-  color: white;
-}
-
-.btn-chef {
-  background-color: #FFEB3B; /* Yellow */
-  color: black;
-}
-
-.btn-artist {
-  background-color: #8BC34A; /* Light Green */
-  color: white;
-}
-
-.btn-musician {
-  background-color: #FF9800; /* Orange */
-  color: white;
-}
-
-.btn-journalist {
-  background-color: #607D8B; /* Blue Grey */
-  color: white;
-}
-
-.btn-scientist {
-  background-color: #3F51B5; /* Indigo */
-  color: white;
-}
-
-.btn-photographer {
-  background-color: #CDDC39; /* Lime */
-  color: white;
-}
-
-.btn-dancer {
-  background-color: #795548; /* Brown */
-  color: white;
-}
-
-.btn-pilot {
-  background-color: #9E9E9E; /* Grey */
-  color: white;
-}
-
-.btn-athlete {
-  background-color: #03A9F4; /* Light Blue */
-  color: white;
-}
-
-/* Style for all buttons */
-button {
-  width: 100%; /* Make buttons take up the full width of their cells */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 5px;
-  display: block;
-  box-sizing: border-box;
-}
-    button:hover {
-  background-color: #304674; /* Change to a gray color on hover */
-  color: white; /* Keep the text white */
-}
-/* Style for the professional job links table */
-.professional-jobs {
-  padding: 30px; /* Add padding around the table within the container */
-}
-.professional-jobs table {
-  width: 100%; /* Make the table take the full width of the container */
-  border-collapse: collapse; /* Remove any space between table cells */
-}
-
-.professional-jobs table td {
-  padding: 10px;
-  text-align: center; /* Center-align the buttons within each cell */
-}
-/* Table styling */
-table {
-  width: 100%; /* Full width */
-  border-collapse: collapse; /* Collapse table borders */
-  margin: 0 auto; /* Center the table */
-}
-
-table td {
-  padding: 10px; /* Add padding to cells */
-  text-align: center; /* Center the text in the cells */
-  border: 1px solid #ccc; /* Optional: Add border to cells */
-}
-
-table td button {
-  width: 100%; /* Make the buttons take up the full width of the cells */
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  transition: all 0.3s;
-}
-
-table td button:hover {
-  opacity: 0.8; /* Optional: Add a hover effect */
-}
-
-/* Responsive styling */
-@media (max-width: 599px) {
-  table td {
-    padding: 8px; /* Adjust padding on smaller screens */
-  }
-  
-  table td button {
-    font-size: 14px; /* Optional: Reduce font size */
-  }
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  /* Adjusting navigation */
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  /* Adjusting box layout */
-  .box {
-    flex-direction: column;
-    margin: 10px;
-  }
-
-  /* Adjusting columns */
-  .column {
-    margin-bottom: 20px;
-  }
-}
-
-  </style>
+    /* Style for the professional job links table */
+    .professional-jobs {
+      padding: 30px; /* Add padding around the table within the container */
+    }
+    .professional-jobs table {
+      width: 100%; /* Make the table take the full width of the container */
+      border-collapse: collapse; /* Remove any space between table cells */
+    }
+    
+    .professional-jobs table td {
+      padding: 10px;
+      text-align: center; /* Center-align the buttons within each cell */
+    }
+    /* Table styling */
+    table {
+      width: 100%; /* Full width */
+      border-collapse: collapse; /* Collapse table borders */
+      margin: 0 auto; /* Center the table */
+    }
+    
+    table td {
+      padding: 10px; /* Add padding to cells */
+      text-align: center; /* Center the text in the cells */
+      border: 1px solid #ccc; /* Optional: Add border to cells */
+    }
+    
+    table td button {
+      width: 100%; /* Make the buttons take up the full width of the cells */
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      transition: all 0.3s;
+    }
+    
+    table td button:hover {
+      opacity: 0.8; /* Optional: Add a hover effect */
+    }
+    
+    /* Responsive styling */
+    @media (max-width: 599px) {
+      table td {
+        padding: 8px; /* Adjust padding on smaller screens */
+      }
+      
+      table td button {
+        font-size: 14px; /* Optional: Reduce font size */
+      }
+    }
+    
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+      /* Adjusting navigation */
+      nav ul li {
+        display: block;
+        margin-bottom: 10px;
+      }
+    
+      /* Adjusting box layout */
+      .box {
+        flex-direction: column;
+        margin: 10px;
+      }
+    
+      /* Adjusting columns */
+      .column {
+        margin-bottom: 20px;
+      }
+    }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Welcome to Apna Career</h1>
-    <p>A platform to explore opportunities and excel in your career journey.</p>
-    <!-- Add a hamburger menu button -->
-<div class="menu-toggle" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+    <div class="container">
+        <h1>Welcome to Apna Career</h1>
+        <p>A platform to explore opportunities and excel in your career journey.</p>
+        <!-- Add a hamburger menu button -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-<!-- Navigation bar with menu items -->
-<nav class="nav-menu">
-  <ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="#">Latest in News</a></li>
-    <li><a href="#">Exams</a></li>
-    <li><a href="#">Scholarships</a></li>
-    <li><a href="#">Jobs</a></li>
-    <li><a href="#">Internships</a></li>
-  </ul>
-</nav>
-    <!-- Space for latest post links -->
-    <div class="latest-posts">
-      <marquee behavior="scroll" direction="left">
-        <!-- Marquee element for scrolling -->
-        <a href="#">Latest Post 1</a>
-        <!-- Example link -->
-        <span> || </span>
-        <!-- Separator -->
-        <a href="#">Latest Post 2</a>
-        <!-- Example link -->
-        <span> || </span>
-        <!-- Separator -->
-        <a href="#">Latest Post 3</a>
-        <!-- Example link -->
-      </marquee>
-    </div>
-    <!-- End of latest post space -->
-  
-<!-- Space for professional job links table -->
-<div class="professional-jobs">
-  <table style="width: 100%;">
-    <tr>
-      <td><button class="btn-engineer" onclick="window.location.href='job1.html';">Engineer</button></td>
-      <td><button class="btn-doctor" onclick="window.location.href='job2.html';">Doctor</button></td>
-      <td><button class="btn-lawyer" onclick="window.location.href='job3.html';">Lawyer</button></td>
-     
-    </tr>
-    <tr>
-      <td><button class="btn-architect" onclick="window.location.href='job5.html';">Architect</button></td>
-      <td><button class="btn-nurse" onclick="window.location.href='job6.html';">Nurse</button></td>
-      <td><button class="btn-accountant" onclick="window.location.href='job7.html';">Accountant</button></td>
-      
-    </tr>
-    <tr>
-      <td><button class="btn-artist" onclick="window.location.href='job9.html';">Artist</button></td>
-      <td><button class="btn-musician" onclick="window.location.href='job10.html';">Musician</button></td>
-      <td><button class="btn-journalist" onclick="window.location.href='job11.html';">Journalist</button></td>
-     
-    <tr>
-      <td><button class="btn-photographer" onclick="window.location.href='job13.html';">Photographer</button></td>
-      <td><button class="btn-dancer" onclick="window.location.href='job14.html';">Dancer</button></td>
-      <td><button class="btn-pilot" onclick="window.location.href='job15.html';">Pilot</button></td>
-      
-    </tr>
-    <tr>
-      <td><button class="btn-photographer" onclick="window.location.href='job13.html';">Photographer</button></td>
-      <td><button class="btn-dancer" onclick="window.location.href='job14.html';">Dancer</button></td>
-      <td><button class="btn-pilot" onclick="window.location.href='job15.html';">Pilot</button></td>
-      
-    </tr>
-  </table>
-</div>
-  <!-- End of professional job links table -->
-</div><!-- End of container -->
+        <!-- Navigation bar with menu items -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">Latest in News</a></li>
+                <li><a href="#">Exams</a></li>
+                <li><a href="#">Scholarships</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Internships</a></li>
+            </ul>
+        </nav>
+        <!-- Space for latest post links -->
+        <div class="latest-posts">
+            <marquee behavior="scroll" direction="left">
+                <!-- Marquee element for scrolling -->
+                <a href="#">Latest Post 1</a>
+                <!-- Example link -->
+                <span> || </span>
+                <!-- Separator -->
+                <a href="#">Latest Post 2</a>
+                <!-- Example link -->
+                <span> || </span>
+                <!-- Separator -->
+                <a href="#">Latest Post 3</a>
+                <!-- Example link -->
+            </marquee>
+        </div>
+        <!-- End of latest post space -->
 
-  
-  <div class="content">
+        <!-- Space for professional job links table -->
+        <div class="professional-jobs">
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <button class="btn-engineer" onclick="window.location.href='job1.html';">Engineer</button>
+                    </td>
+                    <td>
+                        <button class="btn-doctor" onclick="window.location.href='job2.html';">Doctor</button>
+                    </td>
+                    <td>
+                        <button class="btn-lawyer" onclick="window.location.href='job3.html';">Lawyer</button>
+                    </td>
 
-<!-- start of columns -->    
-    <div class="box">
-      <div class="column">
-        <h3>Job Applications</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Job Results</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div></div>
-     <div class="box">
-      <div class="column">
-        <h3>Exam Applications</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Exam Results</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn-architect" onclick="window.location.href='job5.html';">Architect</button>
+                    </td>
+                    <td>
+                        <button class="btn-nurse" onclick="window.location.href='job6.html';">Nurse</button>
+                    </td>
+                    <td>
+                        <button class="btn-accountant" onclick="window.location.href='job7.html';">Accountant</button>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn-artist" onclick="window.location.href='job9.html';">Artist</button>
+                    </td>
+                    <td>
+                        <button class="btn-musician" onclick="window.location.href='job10.html';">Musician</button>
+                    </td>
+                    <td>
+                        <button class="btn-journalist" onclick="window.location.href='job11.html';">Journalist</button>
+                    </td>
+
+                    <tr>
+                        <td>
+                            <button class="btn-photographer" onclick="window.location.href='job13.html';">Photographer</button>
+                        </td>
+                        <td>
+                            <button class="btn-dancer" onclick="window.location.href='job14.html';">Dancer</button>
+                        </td>
+                        <td>
+                            <button class="btn-pilot" onclick="window.location.href='job15.html';">Pilot</button>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn-photographer" onclick="window.location.href='job13.html';">Photographer</button>
+                        </td>
+                        <td>
+                            <button class="btn-dancer" onclick="window.location.href='job14.html';">Dancer</button>
+                        </td>
+                        <td>
+                            <button class="btn-pilot" onclick="window.location.href='job15.html';">Pilot</button>
+                        </td>
+
+                    </tr>
+            </table>
+        </div>
+        <!-- End of professional job links table -->
     </div>
-    <div class="box">
-      <div class="column">
-        <h3>School</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Intermediate</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div></div>
-      <div class="box">
-      <div class="column">
-        <h3>UG</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>PG & Ph.D.</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
+    <!-- End of container -->
+
+
+    <div class="content">
+
+        <!-- start of columns -->
+        <div class="box">
+            <div class="column">
+                <h3>Job Applications</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Job Results</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="column">
+                <h3>Exam Applications</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Exam Results</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="column">
+                <h3>School</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Intermediate</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="column">
+                <h3>UG</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>PG & Ph.D.</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="column">
+                <h3>Banking</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Railways</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="column">
+                <h3>Army & Defence</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Govt. Agencies</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="column">
+                <h3>Personal Development</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Business</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="column">
+                <h3>Teaching</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Learning</h3>
+                <ul>
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a></li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="box">
-      <div class="column">
-        <h3>Banking</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Railways</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div></div>
-    <div class="box">
-      <div class="column">
-        <h3>Army & Defence</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Govt. Agencies</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="box">
-      <div class="column">
-        <h3>Personal Development</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Business</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div></div>
-    <div class="box">
-      <div class="column">
-        <h3>Teaching</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Learning</h3>
-        <ul>
-          <li><a href="#">Title 1</a></li>
-          <li><a href="#">Title 2</a></li>
-          <li><a href="#">Title 3</a></li>
-          <li><a href="#">Title 4</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
 </body>
 <script>
-  function toggleMenu() {
-  var navMenu = document.querySelector('.nav-menu ul');
-  navMenu.classList.toggle('show');
-}
+    function toggleMenu() {
+      var navMenu = document.querySelector('.nav-menu ul');
+      navMenu.classList.toggle('show');
+    }
 </script>
+
 </html>
