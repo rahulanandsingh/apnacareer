@@ -70,14 +70,15 @@
 }
 
 .nav-menu ul li a {
-  text-decoration: none;
+    text-decoration: none;
   color: #304674;
   padding: 10px 20px;
   border-radius: 5px;
   transition: all 0.3s;
 }
 
-.nav-menu ul li a:hover, .active {
+.nav-menu ul li a:hover, 
+.active {
   background-color: #304674;
   color: white;
   box-shadow: 0px 0px 10px #304674;
@@ -307,6 +308,42 @@ button {
   padding: 10px;
   text-align: center; /* Center-align the buttons within each cell */
 }
+/* Table styling */
+table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Collapse table borders */
+  margin: 0 auto; /* Center the table */
+}
+
+table td {
+  padding: 10px; /* Add padding to cells */
+  text-align: center; /* Center the text in the cells */
+  border: 1px solid #ccc; /* Optional: Add border to cells */
+}
+
+table td button {
+  width: 100%; /* Make the buttons take up the full width of the cells */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.3s;
+}
+
+table td button:hover {
+  opacity: 0.8; /* Optional: Add a hover effect */
+}
+
+/* Responsive styling */
+@media (max-width: 599px) {
+  table td {
+    padding: 8px; /* Adjust padding on smaller screens */
+  }
+  
+  table td button {
+    font-size: 14px; /* Optional: Reduce font size */
+  }
+}
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
@@ -370,15 +407,8 @@ button {
       </marquee>
     </div>
     <!-- End of latest post space -->
-  </div>
-
-
-
-
   
-  <div class="content">
-    <div class="box">
-    <!-- Space for professional job links table -->
+<!-- Space for professional job links table -->
 <div class="professional-jobs">
   <table style="width: 100%;">
     <tr>
@@ -406,8 +436,13 @@ button {
       <td><button class="btn-athlete" onclick="window.location.href='job16.html';">Athlete</button></td>
     </tr>
   </table>
-</div></div>
-<!-- End of professional job links table -->
+</div>
+  <!-- End of professional job links table -->
+</div><!-- End of container -->
+
+  
+  <div class="content">
+
 <!-- start of columns -->    
     <div class="box">
       <div class="column">
